@@ -1,4 +1,4 @@
-.PAG 'CLOSE ALL FILES'
+;.PAG 'CLOSE ALL FILES'
 ;***************************************
 ;* CLALL -- CLOSE ALL LOGICAL FILES  *
 ;*      DELETES ALL TABLE ENTRIES AND*
@@ -8,7 +8,7 @@
 ;
 NCLALL	LDA #0
 	STA LDTND       ;FORGET ALL FILES
-.SKI 3
+;.SKI 3
 ;********************************************
 ;* CLRCH -- CLEAR CHANNELS                  *
 ;*   UNLISTEN OR UNTALK IEEE DEVICES, BUT   *
@@ -34,4 +34,4 @@ CLALL2	STX DFLTO       ;OUTPUT CHAN=3=SCREEN
 	LDA #0
 	STA DFLTN       ;INPUT CHAN=0=KEYBOARD
 	RTS
-.END
+;.END

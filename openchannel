@@ -1,4 +1,4 @@
-.PAG 'OPEN CHANNEL'
+;.PAG 'OPEN CHANNEL'
 ;***************************************
 ;* CHKIN -- OPEN CHANNEL FOR INPUT     *
 ;*                                     *
@@ -65,7 +65,7 @@ JX350	TXA
 	BPL JX320       ;YES
 ;
 	JMP ERROR5      ;DEVICE NOT PRESENT
-.PAG 'OPEN CHANNEL OUT'
+;.PAG 'OPEN CHANNEL OUT'
 ;***************************************
 ;* CHKOUT -- OPEN CHANNEL FOR OUTPUT     *
 ;*                                     *
@@ -132,4 +132,4 @@ CK60	TXA
 	BPL CK30        ;YES...FINISH UP
 ;
 	JMP ERROR5      ;NO...DEVICE NOT PRESENT
-.END
+;.END

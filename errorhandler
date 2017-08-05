@@ -1,4 +1,4 @@
-.PAG 'ERROR HANDLER'
+;.PAG 'ERROR HANDLER'
 ;***************************************
 ;* STOP -- CHECK STOP KEY FLAG AND     *
 ;* RETURN Z FLAG SET IF FLAG TRUE.     *
@@ -15,7 +15,7 @@ NSTOP	LDA STKEY       ;VALUE OF LAST ROW
 	STA NDX         ;FLUSH QUEUE
 	PLP
 STOP2	RTS
-.SKI 5
+;.SKI 5
 ;************************************
 ;*                                  *
 ;* ERROR HANDLER                    *
@@ -60,4 +60,4 @@ ERROR9	LDA #9          ;BAD DEVICE #
 EREXIT	PLA
 	SEC
 	RTS
-.END
+;.END

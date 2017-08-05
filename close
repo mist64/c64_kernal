@@ -1,4 +1,4 @@
-.PAG 'CLOSE'
+;.PAG 'CLOSE'
 ;***************************************
 ;* CLOSE -- CLOSE LOGICAL FILE       *
 ;*                                   *
@@ -109,7 +109,7 @@ JXRMV	TAX
 ;
 JX170	CLC             ;CLOSE EXIT
 JX175	RTS
-.SKI 5
+;.SKI 5
 ;LOOKUP TABLIZED LOGICAL FILE DATA
 ;
 LOOKUP	LDA #0
@@ -121,7 +121,7 @@ JX600	DEX
 	CMP LAT,X
 	BNE JX600
 	RTS
-.SKI 5
+;.SKI 5
 ;ROUTINE TO FETCH TABLE ENTRIES
 ;
 JZ100	LDA LAT,X
@@ -131,5 +131,5 @@ JZ100	LDA LAT,X
 	LDA SAT,X
 	STA SA
 JZ101	RTS
-.END
+;.END
 ; RSR  5/12/82 - MODIFY FOR CLN232

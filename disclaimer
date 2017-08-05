@@ -19,9 +19,9 @@
 ;* COPYRIGHT (C) 1983 BY               *
 ;* COMMODORE BUSINESS MACHINES (CBM)   *
 ;***************************************
-.SKI 3
+;.SKI 3
 ;****LISTING DATE --1200 05 AUG 1983****
-.SKI 3
+;.SKI 3
 ;***************************************
 ;* THIS SOFTWARE IS FURNISHED FOR USE  *
 ;* USE IN THE VIC OR COMMODORE COMPUTER*
@@ -38,4 +38,4 @@
 ;* RELIABILITY OF THIS SOFTWARE. RSR   *
 ;*                                     *
 ;***************************************
-.END
+;.END

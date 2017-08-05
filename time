@@ -1,4 +1,4 @@
-.PAG 'TIME FUNCTION'
+;.PAG 'TIME FUNCTION'
 ;***********************************
 ;*                                 *
 ;* TIME                            *
@@ -12,7 +12,7 @@
 ;*     .X=NEXT SIGNIFICANT,.A=LSD  *
 ;*                                 *
 ;***********************************
-.SKI
+;.SKI
 ;INTERRUPTS ARE COMING FROM THE 6526 TIMERS
 ;
 UDTIM	LDX #0          ;PRE-LOAD FOR LATER
@@ -61,18 +61,18 @@ UD70	LDX ROWS        ;WAIT TO SETTLE...
 	BNE UD90        ;LEAVE SAME AS BEFORE...
 UD80	STA STKEY       ;SAVE FOR OTHER ROUTINES
 UD90	RTS
-.SKI 5
+;.SKI 5
 RDTIM	SEI             ;KEEP TIME FROM ROLLING
 	LDA TIME+2      ;GET LSD
 	LDX TIME+1      ;GET NEXT MOST SIG.
 	LDY TIME        ;GET MSD
-.SKI 5
+;.SKI 5
 SETTIM	SEI             ;KEEP TIME FROM CHANGING
 	STA TIME+2      ;STORE LSD
 	STX TIME+1      ;NEXT MOST SIGNIFICANT
 	STY TIME        ;STORE MSD
 	CLI
 	RTS
-.END
+;.END
 ; RSR 8/21/80 REMOVE CRFAC CHANGE STOP
 ; RSR 3/29/82 ADD SHIT KEY CHECK FOR COMMODORE 64
