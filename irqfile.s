@@ -1,43 +1,43 @@
-;.PAGE 'IRQFILE - DISPATCHER'
-; SIMIRQ - SIMULATE AN IRQ (FOR CASSETTE READ)
-;  ENTER BY A JSR SIMIRQ
+;.page 'irqfile - dispatcher'
+; simirq - simulate an irq (for cassette read)
+;  enter by a jsr simirq
 ;
-SIMIRQ	PHP
-	PLA             ;FIX THE BREAK FLAG
-	AND #$EF
-	PHA
-; PULS - CHECKS FOR REAL IRQ'S OR BREAKS
+simirq	php
+	pla             ;fix the break flag
+	and #$ef
+	pha
+; puls - checks for real irq's or breaks
 ;
-PULS	PHA
-	TXA
-	PHA
-	TYA
-	PHA
-	TSX
-	LDA $104,X      ;GET OLD P STATUS
-	AND #$10        ;BREAK FLAG?
-	BEQ PULS1       ;...NO
-	JMP (CBINV)     ;...YES...BREAK INSTR
-PULS1	JMP (CINV)      ;...IRQ
-;.SKI 5
-;.PAG "IRQFILE-PATCHES 6/82"
-; PCINT - ADD UNIVERSAL TO CINIT
+puls	pha
+	txa
+	pha
+	tya
+	pha
+	tsx
+	lda $104,x      ;get old p status
+	and #$10        ;break flag?
+	beq puls1       ;...no
+	jmp (cbinv)     ;...yes...break instr
+puls1	jmp (cinv)      ;...irq
+;.ski 5
+;.pag "irqfile-patches 6/82"
+; pcint - add universal to cinit
 ;
-PCINT	JSR CINT
-P0010	LDA VICREG+18   ;CHECK RASTER COMPARE FOR ZERO
-	BNE P0010       ;IF IT'S ZERO THEN CHECK VALUE
-	LDA VICREG+25   ;GET RASTER IRQ VALUE
-	AND #$01
-	STA PALNTS      ;PLACE IN PAL/NTSC INDICATOR
-	JMP IOKEYS
+pcint	jsr cint
+p0010	lda vicreg+18   ;check raster compare for zero
+	bne p0010       ;if it's zero then check value
+	lda vicreg+25   ;get raster irq value
+	and #$01
+	sta palnts      ;place in pal/ntsc indicator
+	jmp iokeys
 ;
-; PIOKEY - ADD UNIVERSAL TO IOKEYS
+; piokey - add universal to iokeys
 ;
-PIOKEY	LDA #$81        ;ENABLE T1 IRQ'S
-	STA D1ICR
-	LDA D1CRA
-	AND #$80        ;SAVE ONLY TOD BIT
-	ORA #%00010001  ;ENABLE TIMER1
-	STA D1CRA
-	JMP CLKLO       ;RELEASE THE CLOCK LINE***901227-03***
-;.END
+piokey	lda #$81        ;enable t1 irq's
+	sta d1icr
+	lda d1cra
+	and #$80        ;save only tod bit
+	ora #%00010001  ;enable timer1
+	sta d1cra
+	jmp clklo       ;release the clock line***901227-03***
+;.end
