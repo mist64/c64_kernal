@@ -1,14 +1,14 @@
 ;.pag 'jump table/vectors'
 	*=$ff80
-	.byte 3
-	*=$ff8a-9
+	.byte 3         ;kernal version
+
 	jmp pcint
 	jmp ioinit
 	jmp ramtas
-	*=$ff8a         ;new vectors for basic
+	                ;new vectors for basic
 	jmp restor      ;restore vectors to initial system
 	jmp vector      ;change vectors for user
-	* =$ff90
+
 	jmp setmsg      ;control o.s. messages
 	jmp secnd       ;send sa after listen
 	jmp tksa        ;send sa after talk
@@ -48,7 +48,7 @@ jiobas	jmp iobase      ;return i/o base
 
 ;.ski 5
 ;.pag 'jump table/vectors'
-	*=$fffa
+
 	.word nmi        ;program defineable
 	.word start      ;initialization code
 	.word puls       ;interrupt handler

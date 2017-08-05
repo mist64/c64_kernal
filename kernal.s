@@ -2,8 +2,10 @@
 
 .include "disclaimer.s"
 .include "declare.s"
+	.segment "PATCHES"
 .include "patches.s"
-	*=$e500         ;start of vic-40 kernal
+	.segment "KERNAL"
+	;start of vic-40 kernal
 .include "editor.1.s"
 .include "editor.2.s"
 .include "editor.3.s"
