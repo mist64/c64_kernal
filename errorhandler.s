@@ -60,4 +60,3 @@ error9	lda #9          ;bad device #
 erexit	pla
 	sec
 	rts
-;.end

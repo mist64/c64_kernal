@@ -189,7 +189,7 @@ popen	tax             ;we're calculating baud rate
 	rts
 	nop
 	nop
-;.end
+
 ; rsr  8/02/80 - routine for panic
 ; rsr  8/08/80 - panic & stop key
 ; rsr  8/12/80 - change for a0int a subroutine

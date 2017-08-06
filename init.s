@@ -234,7 +234,7 @@ membot	bcc setbot
 setbot	stx memstr
 	sty memstr+1
 	rts
-;.end
+
 ; rsr 8/5/80 change io structure
 ; rsr 8/15/80 add memory test
 ; rsr 8/21/80 change i/o for mod

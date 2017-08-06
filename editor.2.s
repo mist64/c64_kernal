@@ -399,7 +399,7 @@ notkat
 	sta keytab+1
 shfout
 	jmp rekey
-;.end
+
 ; rsr 12/08/81 modify for vic-40
 ; rsr  2/18/82 modify for 6526 input pad sense
 ; rsr  3/11/82 fix keyboard debounce, repair file

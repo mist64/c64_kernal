@@ -262,7 +262,7 @@ cln232	lda #$7f        ;clear nmi's
 	ldy #00
 	sty enabl       ;clear enabls
 	rts
-;.end
+
 ; rsr  8/25/80 - add rs-232 code
 ; rsr  8/26/80 - top of memory handler
 ; rsr  8/29/80 - add filename to m51regs

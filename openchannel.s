@@ -132,4 +132,3 @@ ck60	txa
 	bpl ck30        ;yes...finish up
 ;
 	jmp error5      ;no...device not present
-;.end

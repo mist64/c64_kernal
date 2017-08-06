@@ -198,5 +198,5 @@ faf20	cpy fnlen       ;compare this many
 ;
 faf30	clc             ;success flag
 faf40	rts
-;.end
+
 ; rsr  4/10/82 add key down test in fah...

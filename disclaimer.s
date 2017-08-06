@@ -1,41 +1,40 @@
 ;****************************************
 ;*                                      *
-;* kk  k eeeee rrrr  nn  n  aaa  ll     *
-;* kk kk ee    rr  r nnn n aa  a ll     *
-;* kkk   ee    rr  r nnn n aa  a ll     *
-;* kkk   eeee  rrrr  nnnnn aaaaa ll     *
-;* kk k  ee    rr  r nn nn aa  a ll     *
-;* kk kk ee    rr  r nn nn aa  a ll     *
-;* kk kk eeeee rr  r nn nn aa  a lllll  *
+;* KK  K EEEEE RRRR  NN  N  AAA  LL     *
+;* KK KK EE    RR  R NNN N AA  A LL     *
+;* KKK   EE    RR  R NNN N AA  A LL     *
+;* KKK   EEEE  RRRR  NNNNN AAAAA LL     *
+;* KK K  EE    RR  R NN NN AA  A LL     *
+;* KK KK EE    RR  R NN NN AA  A LL     *
+;* KK KK EEEEE RR  R NN NN AA  A LLLLL  *
 ;*                                      *
 ;***************************************
 ;
 ;***************************************
-;* c64 kernal                          *
-;*   memory and i/o dependent routines *
-;* driving the hardware of the         *
-;* following cbm models:               *
-;*   commodore 64 (ntsc or pal video)  *
-;* copyright (c) 1983 by               *
-;* commodore business machines (cbm)   *
+;* C64 KERNAL                          *
+;*   MEMORY AND I/O DEPENDENT ROUTINES *
+;* DRIVING THE HARDWARE OF THE         *
+;* FOLLOWING CBM MODELS:               *
+;*   COMMODORE 64 (NTSC OR PAL VIDEO)  *
+;* COPYRIGHT (C) 1983 BY               *
+;* COMMODORE BUSINESS MACHINES (CBM)   *
 ;***************************************
-;.ski 3
-;****listing date --1200 05 aug 1983****
-;.ski 3
+;.SKI 3
+;****LISTING DATE --1200 05 AUG 1983****
+;.SKI 3
 ;***************************************
-;* this software is furnished for use  *
-;* use in the vic or commodore computer*
-;* series only.                        *
+;* THIS SOFTWARE IS FURNISHED FOR USE  *
+;* USE IN THE VIC OR COMMODORE COMPUTER*
+;* SERIES ONLY.                        *
 ;*                                     *
-;* copies thereof may not be provided  *
-;* or made available for use on any    *
-;* other system.                       *
+;* COPIES THEREOF MAY NOT BE PROVIDED  *
+;* OR MADE AVAILABLE FOR USE ON ANY    *
+;* OTHER SYSTEM.                       *
 ;*                                     *
-;* the information in this document is *
-;* subject to change without notice.   *
+;* THE INFORMATION IN THIS DOCUMENT IS *
+;* SUBJECT TO CHANGE WITHOUT NOTICE.   *
 ;*                                     *
-;* no responsibility is assumed for    *
-;* reliability of this software. rsr   *
+;* NO RESPONSIBILITY IS ASSUMED FOR    *
+;* RELIABILITY OF THIS SOFTWARE. RSR   *
 ;*                                     *
 ;***************************************
-;.end

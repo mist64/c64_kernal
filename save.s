@@ -116,4 +116,3 @@ saving	lda msgflg
 	ldy #ms11-ms1   ;'saving'
 	jsr msg
 	jmp outfn       ;<file name>
-;.end

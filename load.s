@@ -224,4 +224,3 @@ loding	ldy #ms10-ms1   ;assume 'loading'
 	beq ld410       ;are doing load
 	ldy #ms21-ms1   ;are 'verifying'
 ld410	jmp spmsg
-;.end

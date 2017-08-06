@@ -609,6 +609,6 @@ coltab
 ;blk,wht,red,cyan,magenta,grn,blue,yellow
 	.byt $90,$05,$1c,$9f,$9c,$1e,$1f,$9e
 	.byt $81,$95,$96,$97,$98,$99,$9a,$9b
-;.end
+
 ; rsr modify for vic-40 system
 ; rsr 12/31/81 add 8 more colors

@@ -405,7 +405,7 @@ newch	lda #8          ;set up for 8 bits+parity
 	sta prty        ;..parity bit
 	sta rez         ;..zero count
 	rts             ;.a=0 on return
-;.end
+
 ; rsr 7/31/80 add comments
 ; rsr 3/28/82 modify for c64 (add stupid/comments)
 ; rsr 3/29/82 put block t1irq control

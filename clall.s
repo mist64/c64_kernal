@@ -34,4 +34,3 @@ clall2	stx dflto       ;output chan=3=screen
 	lda #0
 	sta dfltn       ;input chan=0=keyboard
 	rts
-;.end

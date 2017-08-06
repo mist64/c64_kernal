@@ -177,7 +177,7 @@ rspoff	lda enabl       ;wait untill done
 	sta enabl       ;clear all enabls
 rspok	pla             ;all done
 	rts
-;.end
+
 ; rsr  8/24/80 original code out
 ; rsr  8/25/80 original code in
 ; rsr  9/22/80 remove parallel refs & fix xline logic

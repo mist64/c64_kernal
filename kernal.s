@@ -38,4 +38,3 @@
 
 	.segment "VECTORS"
 .include "vectors.s"
-;.end

@@ -176,7 +176,7 @@ stt3	lda d1t2l       ;watch out for d1t2h rollover...
 	jmp simirq
 stt4	cli             ;allow for re-entry code
 	rts
-;.end
+
 ; rsr 8/25/80 modify i/o for mod2 hardware
 ; rsr 12/11/81 modify i/o for vic-40
 ; rsr 2/9/82 add screen disable for tape

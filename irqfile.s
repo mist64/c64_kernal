@@ -19,4 +19,3 @@ puls	pha
 	beq puls1       ;...no
 	jmp (cbinv)     ;...yes...break instr
 puls1	jmp (cinv)      ;...irq
-;.end

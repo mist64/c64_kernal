@@ -26,4 +26,3 @@ msg	lda ms1,y
 	bpl msg
 msg10	clc
 	rts
-;.end

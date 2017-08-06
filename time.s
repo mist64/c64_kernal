@@ -73,6 +73,6 @@ settim	sei             ;keep time from changing
 	sty time        ;store msd
 	cli
 	rts
-;.end
+
 ; rsr 8/21/80 remove crfac change stop
 ; rsr 3/29/82 add shit key check for commodore 64

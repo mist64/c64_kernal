@@ -202,5 +202,5 @@ rstor1	rts
 ;
 bo50	jsr bso232      ;pass data through variable t1
 	jmp rstoa       ;go restore all..always good
-;.end
+
 ; rsr 5/12/82 fix bsout for no reg affect but errors

@@ -290,7 +290,7 @@ w1ms1	dex             ;5us loop
 	bne w1ms1
 	tax             ;restore .x
 	rts
-;.end
+
 ;*******************************
 ;written 8/11/80 bob fairbairn
 ;test serial0.6 8/12/80  rjf
@@ -307,4 +307,3 @@ w1ms1	dex             ;5us loop
 ;change acptr eoi for better response 3/28/82 rsr
 ;change wait 1 ms routine for less code 4/8/82 rsr
 ;******************************
-;.end

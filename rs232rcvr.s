@@ -122,7 +122,7 @@ err232	ora rsstat
 rsr060	lda ridata      ;expecting stop...
 	bne framee      ;frame error
 	beq breake      ;could be a break
-;.end
+
 ; rsr -  8/21/80 add mods
 ; rsr -  8/24/80 fix errors
 ; rsr -  8/27/80 fix major errors

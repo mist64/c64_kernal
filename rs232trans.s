@@ -137,7 +137,7 @@ bit010	bvc bit020
 	dex             ;bit 6 high is a 6 or 5
 	dex
 bit020	rts
-;.end
+
 ; rsr  8/24/80 correct some mistakes
 ; rsr  8/27/80 change bitnum base to #bits+1
 ; rsr 12/11/81 modify for vic-40

@@ -189,7 +189,7 @@ incsal	inc sal
 	bne incr
 	inc sah
 incr	rts
-;.end
+
 ; rsr 7/28/80 add comments
 ; rsr 8/4/80 changed i/o for vixen
 ; rsr 8/21/80 changed i/o for vixen mod

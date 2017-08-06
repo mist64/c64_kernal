@@ -51,4 +51,3 @@ jiobas	jmp iobase      ;return i/o base
 	.word nmi        ;program defineable
 	.word start      ;initialization code
 	.word puls       ;interrupt handler
-;.end

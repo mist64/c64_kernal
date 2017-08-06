@@ -194,7 +194,7 @@ ldtb2
 	.byte <linz22
 	.byte <linz23
 	.byte <linz24
-;.end
+
 ; rsr 12/08/81 modify for vic-40 keyscan
 ; rsr  2/17/81 modify for the stinking 6526r2 chip
 ; rsr  3/11/82 modify for commodore 64

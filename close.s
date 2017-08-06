@@ -131,5 +131,5 @@ jz100	lda lat,x
 	lda sat,x
 	sta sa
 jz101	rts
-;.end
+
 ; rsr  5/12/82 - modify for cln232
