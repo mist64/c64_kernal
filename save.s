@@ -9,7 +9,7 @@
 ;*start of save is indirect at .a  *
 ;*end of save is .x,.y             *
 ;***********************************
-;.ski 3
+
 savesp	stx eal
 	sty eah
 	tax             ;set up start
@@ -61,7 +61,7 @@ break	jsr clsei
 sv40	jsr incsal      ;increment current addr.
 	bne sv30
 sv50	jsr unlsn
-;.ski 5
+
 clsei	bit sa
 	bmi clsei2
 	lda fa
@@ -75,7 +75,7 @@ cunlsn	jsr unlsn       ;entry for openi
 ;
 clsei2	clc
 	rts
-;.ski 5
+
 sv100	lsr a
 	bcs sv102       ;if c-set then it's cassette
 ;
@@ -106,7 +106,7 @@ sv106	txa
 ;
 sv110	clc
 sv115	rts
-;.ski 3
+
 ;subroutine to output:
 ;'saving <file name>'
 ;

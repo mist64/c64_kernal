@@ -11,7 +11,7 @@ ms17	.byt $d,"FOUND",$a0
 ms18	.byt $d,"OK",$8d
 ; ms34 .byt $d,"MONITOR",$8d
 ; ms36 .byt $d,"BREA",$cb
-;.ski 5
+
 ;print message to screen only if
 ;output enabled
 ;

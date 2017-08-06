@@ -72,7 +72,7 @@ rst030	lda roprty      ;even parity
 ;
 rst040	bvs rspext      ;wanted space
 	bvc rswext      ; wanted mark
-;.ski 3
+
 ; stop bits
 ;
 rst050	inc bitts       ;stop bit count towards zero
@@ -105,7 +105,7 @@ rst080	ldy rodbs       ;check buffer pointers
 	sta rodata      ;...into byte buffer
 	inc rodbs       ;move pointer to next
 	rts
-;.ski 3
+
 ; set errors
 ;
 dsrerr	lda #$40        ;dsr gone error
@@ -124,7 +124,7 @@ oenabl	sta d2icr       ;toss bad/old nmi
 	sta enabl
 	sta d2icr
 	rts
-;.ski 3
+
 ; bitcnt - cal # of bits to be sent
 ;   returns #of bits+1
 ;

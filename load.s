@@ -14,7 +14,7 @@
 ;* high load return in x,y.       *
 ;*                                *
 ;**********************************
-;.ski 3
+
 loadsp	stx memuss      ;.x has low alt start
 	sty memuss+1
 load	jmp (iload)     ;monitor load entry
@@ -188,7 +188,7 @@ ld180	clc             ;good exit
 	ldy eah
 ;
 ld190	rts
-;.ski 5
+
 ;subroutine to print to console:
 ;
 ;searching [for name]
@@ -201,7 +201,7 @@ luking	lda msgflg      ;supposed to print?
 	beq ld115
 	ldy #ms6-ms1    ;"for"
 	jsr msg
-;.ski 3
+
 ;subroutine to output file name
 ;
 outfn	ldy fnlen       ;is there a name?
@@ -214,7 +214,7 @@ ld110	lda (fnadr),y
 	bne ld110
 ;
 ld115	rts
-;.ski 3
+
 ;subroutine to print:
 ;
 ;loading/verifing

@@ -61,7 +61,7 @@ read	ldx d1t2h       ;get time since last interrupt
 	ldx dpsw        ;check if last bit...
 	beq rjdj        ;...no then continue
 	jmp radj        ;...yes then go finish byte
-;.ski 2
+
 rjdj	ldx pcntr       ;if 9 bits read...
 	bmi jrad2       ;... then goto ending
 	ldx #0          ;set bit value to zero
@@ -79,12 +79,12 @@ rjdj	ldx pcntr       ;if 9 bits read...
 	cmp temp        ;check for longlong...
 	bcc srer        ;...greater than is error
 jrad2	jmp rad2        ;...it's a longlong
-;.ski 2
+
 srer	lda snsw1       ;if not syncronized...
 	beq rdbk        ;...then no error
 	sta rer         ;...else flag rer
 	bne rdbk        ;jmp
-;.ski 2
+
 radx2	inc rez         ;count rez up on zeros
 	bcs rad5        ;jmp
 radl	dec rez         ;count rez down on ones
@@ -98,7 +98,7 @@ rad5	sec             ;calc actual value for compare store
 	sta firt
 	beq rad3        ;second half of dipole
 	stx data        ;first half so store its value
-;.ski 3
+
 rdbk	lda snsw1       ;if no byte start...
 	beq radbk       ;...then return
 	lda kika26      ;check to see if timer1 irqd us...
@@ -113,13 +113,13 @@ radkx	lda #0          ;...yes, set dipole flag for first half
 	lda pcntr       ;check where we are in byte...
 	bpl rad4        ;...doing data
 	bmi jrad2       ;...process parity
-;.ski 2
+
 radp	ldx #166        ;set up for longlong timeout
 	jsr stt1
 	lda prty        ;if parity not even...
 	bne srer        ;...then go set error
 radbk	jmp prend       ;go restore regs and rti
-;.ski 3
+
 rad3	lda svxt        ;adjust the software servo (cmp0)
 	beq rout1       ;no adjust
 	bmi rout2       ;adjust for more base time
@@ -140,7 +140,7 @@ rout1	lda #0          ;clear difference value
 	bcc rdbk        ;....no so continue
 	sta syno        ;....yes so flag syno (between blocks)
 	bcs rdbk        ;jmp
-;.ski 3
+
 rad4	txa             ;move read data to .a
 	eor prty        ;calculate parity
 	sta prty
@@ -153,7 +153,7 @@ rad4	txa             ;move read data to .a
 	ldx #218        ;set up for next dipole
 	jsr stt1
 	jmp prend       ;restore regs and rti
-;.ski 3
+
 ; rad2 - longlong handler (could be a long one)
 rad2	lda syno        ;have we gotten block sync...
 	beq rad2y       ;...no
@@ -162,7 +162,7 @@ rad2	lda syno        ;have we gotten block sync...
 rad2y	lda pcntr       ;are we at end of byte...
 	bmi rad2x       ;yes...go adjust for longlong
 	jmp radl        ;...no so treat it as a long one read
-;.ski 2
+
 rad2x	lsr temp        ;adjust timeout for...
 	lda #147        ;...longlong pulse value
 	sec
@@ -196,7 +196,7 @@ radk	lda mych        ;pass character to byte routine
 	ora rez
 	sta prp         ;...and save in prp
 rdbk2	jmp prend       ;go back and get last byte
-;.ski 2
+
 radj	jsr newch       ;finish byte, clr flags
 	sta dpsw        ;clear bit throw away flag
 	ldx #218        ;initilize for next dipole
@@ -270,11 +270,11 @@ rd200	dec rdflg       ;wait untill we get real data...
 	lda #0          ;debug code##################################################
 	sta shcnh
 	beq rd10        ;jmp to continue
-;.ski 2
+
 rd40	lda #$80        ;we want to...
 	sta rdflg       ;ignore bytes mode
 	bne rd10        ;jmp
-;.ski 2
+
 rd60	lda diff        ;check for end of block...
 	beq rd70        ;...okay
 ;
@@ -282,7 +282,7 @@ rd60	lda diff        ;check for end of block...
 	jsr udst
 	lda #0          ;force rdflg for an end
 	jmp rd161
-;.ski 2
+
 rd70	jsr cmpste      ;check for end of storage area
 	bcc *+5         ;not done yet
 	jmp rd160
@@ -297,7 +297,7 @@ rd70	jsr cmpste      ;check for end of storage area
 	beq rd80        ;...good so continue
 	lda #1          ;...bad so flag...
 	sta prp         ;...as an error
-;.ski 1
+
 ; store bad locations for second pass re-try
 rd80	lda prp         ;chk for errors...
 	beq rd59        ;...no errors
@@ -313,7 +313,7 @@ rd80	lda prp         ;chk for errors...
 	inx
 	stx ptr1
 	jmp rd59        ;go store character
-;.ski 2
+
 ; check bad table for re-try (second pass)
 rd58	ldx ptr2        ;have we done all in the table?...
 	cpx ptr1
@@ -334,14 +334,14 @@ rd58	ldx ptr2        ;have we done all in the table?...
 	beq rd90        ;...okay
 	iny             ;make .y= 1
 	sty prp         ;flag it as an error
-;.ski 2
+
 rd52	lda prp         ;a second pass error?...
 	beq rd59        ;...no
 ;second pass err
 rd55	lda #sperr
 	jsr udst
 	bne rd90        ;jmp
-;.ski 2
+
 rd59	lda verck       ;load or verify?...
 	bne rd90        ;...verify, don't store
 	tay             ;make y zero
@@ -349,7 +349,7 @@ rd59	lda verck       ;load or verify?...
 	sta (sal),y      ;store character
 rd90	jsr incsal      ;increment addr.
 	bne rd180       ;branch always
-;.ski 3
+
 rd160	lda #$80        ;set mode skip next data
 rd161	sta rdflg
 ;
@@ -369,7 +369,7 @@ rd167	dec shcnl       ;dec pass calc...
 	bne rd180       ;...yes so continue
 	sta fsblk       ;clear fsblk if no errors...
 	beq rd180       ;jmp to exit
-;.ski 2
+
 rd175	jsr tnif        ;read it all...exit
 	jsr rd300       ;restore sal & sah
 	ldy #0          ;set shcnh to zero...
@@ -390,13 +390,13 @@ vprty	lda (sal),y      ;calc block bcc
 	lda #ckerr
 	jsr udst
 rd180	jmp prend
-;.ski 4
+
 rd300	lda stah        ; restore starting address...
 	sta sah         ;...pointers (sah & sal)
 	lda stal
 	sta sal
 	rts
-;.ski 4
+
 newch	lda #8          ;set up for 8 bits+parity
 	sta pcntr
 	lda #0          ;initilize...

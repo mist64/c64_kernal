@@ -4,7 +4,7 @@ jtp20	jsr zzz
 	ldy bufpt
 	cpy #bufsz
 	rts
-;.ski 5
+
 ;stays in routine d2t1ll play switch
 ;
 cste1	jsr cs10
@@ -16,7 +16,7 @@ cs40	jsr tstop       ;watch for stop key
 	bne cs40
 	ldy #ms18-ms1   ;"ok"
 	jmp msg
-;.ski 5
+
 ;subr returns <> for cassette switch
 ;
 cs10	lda #$10        ;check port
@@ -25,21 +25,21 @@ cs10	lda #$10        ;check port
 	bit r6510       ;check again to debounce
 cs25	clc             ;good return
 	rts
-;.ski 5
+
 ;checks for play & record
 ;
 cste2	jsr cs10
 	beq cs25
 	ldy #ms8-ms1    ;"record"
 	bne cs30
-;.ski 5
+
 ;read header block entry
 ;
 rblk	lda #0
 	sta status
 	sta verck
 	jsr ldad1
-;.ski 3
+
 ;read load block entry
 ;
 trd	jsr cste1       ;say 'press play'
@@ -55,7 +55,7 @@ trd	jsr cste1       ;say 'press play'
 	lda #$90        ;enable for ca1 irq...read line
 	ldx #14         ;point irq vector to read
 	bne tape        ;jmp
-;.ski 5
+
 ;write header block entry
 ;
 wblk	jsr ldad1
@@ -69,7 +69,7 @@ twrt3	bcs stop3       ;stop key pressed
 	sei
 	lda #$82        ;enable t2 irqs...write time
 	ldx #8          ;vector irq to wrtz
-;.ski 5
+
 ;start tape operation entry point
 ;
 tape	ldy #$7f        ;kill unwanted irq's
@@ -116,7 +116,7 @@ tp40	lda irqtmp+1    ;check for interrupt vector...
 ;
 	jsr ud60        ; stop key check
 	jmp tp40        ;stay in loop untill tapes are done
-;.ski 5
+
 tstop	jsr stop        ;stop key down?
 	clc             ;assume no stop
 	bne stop4       ;we were right
@@ -133,7 +133,7 @@ tstop	jsr stop        ;stop key down?
 stop3	lda #0          ;deallocate irqtmp
 	sta irqtmp+1    ;if c-set then stop key
 stop4	rts
-;.ski 5
+
 ;
 ; stt1 - set up timeout watch for next dipole
 ;

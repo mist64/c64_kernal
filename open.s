@@ -112,7 +112,7 @@ op171	lda #bufsz-1    ;assume force read
 op172	sta bufpt       ;point to data
 op175	clc             ;flag good open
 op180	rts             ;exit in peace
-;.ski 5
+
 openi	lda sa
 	bmi op175       ;no sa...done
 ;

@@ -15,7 +15,7 @@ nstop	lda stkey       ;value of last row
 	sta ndx         ;flush queue
 	plp
 stop2	rts
-;.ski 5
+
 ;************************************
 ;*                                  *
 ;* error handler                    *

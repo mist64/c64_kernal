@@ -26,7 +26,7 @@ gn232	sty xsav        ;save .y, used in rs232
 	ldy xsav        ;restore .y
 gn20	clc             ;good return
 	rts
-;.ski 3
+
 ;***************************************
 ;* basin-- input character from channel*
 ;*     input differs from get on device*
@@ -87,7 +87,7 @@ jtg36	tax             ;save error info
 	txa             ;restore error
 jtg37	ldx xsav        ;return
 	rts             ;error return c-set from jtget
-;.ski 3
+
 ;get a character from appropriate
 ;cassette buffer
 ;
@@ -102,7 +102,7 @@ jtget	jsr jtp20       ;buffer pointer wrap?
 jtg10	lda (tape1),y    ;get char from buf
 	clc             ;good return
 	rts 
-;.ski 3
+
 ;input from serial bus
 ;
 bn30	lda status      ;status from last

@@ -12,7 +12,7 @@
 ;*     .x=next significant,.a=lsd  *
 ;*                                 *
 ;***********************************
-;.ski
+
 ;interrupts are coming from the 6526 timers
 ;
 udtim	ldx #0          ;pre-load for later
@@ -61,12 +61,12 @@ ud70	ldx rows        ;wait to settle...
 	bne ud90        ;leave same as before...
 ud80	sta stkey       ;save for other routines
 ud90	rts
-;.ski 5
+
 rdtim	sei             ;keep time from rolling
 	lda time+2      ;get lsd
 	ldx time+1      ;get next most sig.
 	ldy time        ;get msd
-;.ski 5
+
 settim	sei             ;keep time from changing
 	sta time+2      ;store lsd
 	stx time+1      ;next most significant

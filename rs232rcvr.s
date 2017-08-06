@@ -59,7 +59,7 @@ rsrabl	lda #$90        ;enable flag for next byte
 ;
 rsrsxt	lda #$02        ;disable t2
 	jmp oenabl      ;flip-off enabl***************
-;.ski 2
+
 ; reciever start bit check
 ;
 rsrtrt	lda inbit       ;check if space
@@ -67,7 +67,7 @@ rsrtrt	lda inbit       ;check if space
 	jmp prtyp       ;go to parity patch 901227-03
 ; sta rinone ;good...disable flag
 ; rts ;and exit
-;.ski 4
+
 ;
 ; put data in buffer (at parity time)
 ;

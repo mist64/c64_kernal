@@ -162,7 +162,7 @@ bsi010	ora #$08        ;set buffer empty status
 	sta rsstat
 	lda #$0         ;return a null
 	rts
-;.ski 4
+
 ; rsp232 - protect serial/cass from rs232 nmi's
 ;
 rsp232	pha             ;save .a

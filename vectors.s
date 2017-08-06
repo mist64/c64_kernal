@@ -45,7 +45,7 @@ jiobas	jmp iobase      ;return i/o base
 
 	.byte "RRBY"
 
-;.ski 5
+
 ;.pag 'jump table/vectors'
 
 	.word nmi        ;program defineable

@@ -18,7 +18,7 @@ keycod	;keyboard mode 'dispatch'
 ;.word cctta3 ;limited graphics
 ;.word cctta3 ;dummy
 ;.word contrl
-;.ski 5
+
 ;.pag 'editor.3'
 mode1
 ;del,3,5,7,9,+,yen sign,1
@@ -38,7 +38,7 @@ mode1
 ;crsr dwn,l.shift,x,v,n,,,/,stop
 	.byt $31,$5f,$04,$32,$20,$02,$51,$03
 	.byt $ff        ;end of table null
-;.ski3
+
 mode2	;shift
 ;ins,%,',),+,yen,!
 	.byt $94,$8d,$9d,$8c,$89,$8a,$8b,$91
@@ -83,7 +83,7 @@ lower
 	lda vicreg+24   ;else set vic to point to lower case
 	ora #$02
 	bne ulset       ;jmp
-;.ski
+
 upper
 	cmp #$8e        ;does he want upper case
 	bne lock        ;branch if not
@@ -91,14 +91,14 @@ upper
 	and #$ff-$02
 ulset	sta vicreg+24
 outhre	jmp loop2
-;.ski
+
 lock
 	cmp #8          ;does he want to lock in this mode?
 	bne unlock      ;branch if not
 	lda #$80        ;else set lock switch on
 	ora mode        ;don't hurt anything - just in case
 	bmi lexit
-;.ski
+
 unlock
 	cmp #9          ;does he want to unlock the keyboard?
 	bne outhre      ;branch if not
@@ -119,7 +119,7 @@ lexit	sta mode
 ;k56-k63
 ;.byt $f2,$f4,$f6,$ff,$f0,$ed,$93,$8c
 ;.byt $ff ;end of table null
-;.ski3
+
 contrl
 ;null,red,purple,blue,rvs ,null,null,black
 	.byt $ff,$ff,$ff,$ff,$ff,$ff,$ff,$ff
@@ -165,7 +165,7 @@ linz21	= linz20+llen
 linz22	= linz21+llen
 linz23	= linz22+llen
 linz24	= linz23+llen
-;.skip 3
+
 ;****** screen lines lo byte table ******
 ;
 ldtb2

@@ -171,7 +171,7 @@ tnof	lda r6510       ;turn off cassette motor
 	ora #$20        ;
 	sta r6510
 	rts
-;.ski 3
+
 ;compare start and end load/save
 ;addresses.  subroutine called by
 ;tape read, save, tape write
@@ -182,7 +182,7 @@ cmpste	sec
 	lda sah
 	sbc eah
 	rts
-;.ski 3
+
 ;increment address pointer sal
 ;
 incsal	inc sal

@@ -8,7 +8,7 @@
 ;
 nclall	lda #0
 	sta ldtnd       ;forget all files
-;.ski 3
+
 ;********************************************
 ;* clrch -- clear channels                  *
 ;*   unlisten or untalk ieee devices, but   *

@@ -109,7 +109,7 @@ jxrmv	tax
 ;
 jx170	clc             ;close exit
 jx175	rts
-;.ski 5
+
 ;lookup tablized logical file data
 ;
 lookup	lda #0
@@ -121,7 +121,7 @@ jx600	dex
 	cmp lat,x
 	bne jx600
 	rts
-;.ski 5
+
 ;routine to fetch table entries
 ;
 jz100	lda lat,x

@@ -13,7 +13,6 @@ cpatch                  ;always clear to current foregnd color
 	lda color
 	sta (user),y
 	rts
-;.ski 5
 
 ; fpatch - tape filename timeout
 ;
@@ -24,7 +23,6 @@ fpat00	ldy stkey       ;check for key down on last row...
 	cmp time+1      ;watch timer
 	bne fpat00
 fpat01	rts
-;.ski 5
 
 ;
 ; baudop - baud rate table for pal
