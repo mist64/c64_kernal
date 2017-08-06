@@ -2,8 +2,10 @@
 
 .include "disclaimer.s"
 .include "declare.s"
-	.segment "PATCHES"
-.include "patches.s"
+
+	.segment "LOPATCHES"
+.include "lopatches.s"
+
 	.segment "KERNAL"
 	;start of vic-40 kernal
 .include "editor.1.s"
@@ -30,5 +32,10 @@
 .include "init.s"
 .include "rs232nmi.s"
 .include "irqfile.s"
+
+	.segment "HIPATCHES"
+.include "hipatches.s"
+
+	.segment "VECTORS"
 .include "vectors.s"
 ;.end

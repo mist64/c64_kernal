@@ -1,5 +1,4 @@
 ;.pag 'jump table/vectors'
-	*=$ff80
 	.byte 3         ;kernal version
 
 	jmp pcint
