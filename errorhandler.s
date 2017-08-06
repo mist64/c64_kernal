@@ -1,4 +1,3 @@
-;.pag 'error handler'
 ;***************************************
 ;* stop -- check stop key flag and     *
 ;* return z flag set if flag true.     *

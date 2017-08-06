@@ -1,4 +1,3 @@
-;.pag 'close'
 ;***************************************
 ;* close -- close logical file       *
 ;*                                   *

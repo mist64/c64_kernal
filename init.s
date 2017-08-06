@@ -1,4 +1,3 @@
-;.page 'initialization'
 ; start - system reset
 ; will goto rom at $8000...
 ; if locs $8004-$8008
@@ -68,7 +67,7 @@ vectss	.word key,timb,nnmi
 	.word nclall,timb ;goto break on a usrcmd jmp
 	.word nload,nsave
 vectse
-;.page 'initilize code'
+
 ; ramtas - memory size check and set
 ;
 ramtas	lda #0          ;zero low memory
@@ -122,7 +121,7 @@ size	tya             ;set top of memory
 	rts
 
 bsit	.word wrtz,wrtn,key,read ;table of indirects for cassette irq's
-;.pag 'initilize code'
+
 ; ioinit - initilize io devices
 ;
 ioinit	lda #$7f        ;kill interrupts
@@ -178,7 +177,7 @@ i0020	sta d1t1h
 ;
 sixty	= 17045         ; ntsc
 sixtyp	= 16421         ; pal
-;.page 'init - sys subs'
+
 setnam	sta fnlen
 	stx fnadr
 	sty fnadr+1

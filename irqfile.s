@@ -1,4 +1,3 @@
-;.page 'irqfile - dispatcher'
 ; simirq - simulate an irq (for cassette read)
 ;  enter by a jsr simirq
 ;

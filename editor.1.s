@@ -1,4 +1,3 @@
-;.pag 'screen editor'
 maxchr=80
 nwrap=2 ;max number of physical lines per logical line
 ;

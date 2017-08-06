@@ -1,4 +1,3 @@
-;.page "patches"
 *=$e500-45      ;(38-7)
 ; prtyp - rs232 parity patch...added 901227-03
 ;

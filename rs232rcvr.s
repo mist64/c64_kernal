@@ -1,4 +1,3 @@
-;.pag 'rs-232 receiver'
 ; rsrcvr - nmi routine to collect
 ;  data into bytes
 ;
@@ -36,7 +35,7 @@ rsrcvr	ldx rinone      ;check for start bit
 ; exit
 ;
 rsrext	rts
-;.pag 'rs-232 receiver'
+
 ; have stop bit, so store in buffer
 ;
 rsr018	dec bitci       ;no parity, dec so check works

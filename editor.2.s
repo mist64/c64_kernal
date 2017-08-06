@@ -1,4 +1,3 @@
-;.pag 'editor.2'
 ;screen scroll routine
 ;
 scrol	lda sal
@@ -78,7 +77,7 @@ pulind	pla             ;restore old indirects
 	pla
 	sta sal
 	rts
-;.page
+
 newlin
 	ldx tblx
 bmt1	inx

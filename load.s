@@ -1,4 +1,3 @@
-;.pag 'load function'
 ;**********************************
 ;* load ram function              *
 ;*                                *

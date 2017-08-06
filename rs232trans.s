@@ -1,4 +1,3 @@
-;.page 'rs-232 transmitt'
 ; rstrab - entry for nmi continue routine
 ; rstbgn - entry for start transmitter
 ;
@@ -41,7 +40,7 @@ rstext	txa             ;calc bit whole to send
 	and #$04        ;goes out d2pa2
 	sta nxtbit
 	rts
-;.page 'rs-232 transmitt'
+
 ; calculate parity
 ;  nxtbit =0 upon entry
 ;
@@ -79,7 +78,7 @@ rst050	inc bitts       ;stop bit count towards zero
 	ldx #$ff        ;send stop bit
 	bne rstext      ;jump to exit
 ;
-;.pag 'rs-232 transmitt'
+
 ; rstbgn - entry to start byte trans
 ;
 rstbgn	lda m51cdr      ;check for 3/x line

@@ -1,4 +1,3 @@
-;.pag 'close all files'
 ;***************************************
 ;* clall -- close all logical files  *
 ;*      deletes all table entries and*

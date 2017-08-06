@@ -1,4 +1,3 @@
-;.pag "irqfile-patches 6/82"
 ; pcint - add universal to cinit
 ;
 pcint	jsr cint

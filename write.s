@@ -1,4 +1,3 @@
-;.pag 'tape write'
 ; cassette info - fsblk is block counter for record
 ;       fsblk = 2 -first header
 ;             = 1 -first data

@@ -1,4 +1,3 @@
-;.pag 'channel i/o'
 ;***************************************
 ;* getin -- get character from channel *
 ;*      channel is determined by dfltn.*
@@ -123,7 +122,7 @@ bn50	jsr gn232       ;get info
 	and #$60
 	bne bn31        ;an error...exit with c/r
 	beq bn50        ;no error...stay in loop
-;.pag 'channel output'
+
 ;***************************************
 ;* bsout -- out character to channel   *
 ;*     determined by variable dflto:   *

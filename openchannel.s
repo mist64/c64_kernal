@@ -1,4 +1,3 @@
-;.pag 'open channel'
 ;***************************************
 ;* chkin -- open channel for input     *
 ;*                                     *
@@ -65,7 +64,7 @@ jx350	txa
 	bpl jx320       ;yes
 ;
 	jmp error5      ;device not present
-;.pag 'open channel out'
+
 ;***************************************
 ;* chkout -- open channel for output     *
 ;*                                     *

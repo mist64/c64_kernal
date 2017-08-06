@@ -1,4 +1,3 @@
-;.page 'cassette read'
 ; variables used in cassette read routines
 ;
 ;  rez - counts zeros (if z then correct # of dipoles)
@@ -31,7 +30,7 @@
 ;  stupid - hold indicator (nz - no t1irq yet) for t1irq
 ;  kika26 - holds old d1icr after clear on read
 ;
-;.pag 'cassette read'
+
 read	ldx d1t2h       ;get time since last interrupt
 	ldy #$ff        ;compute counter difference
 	tya
@@ -204,7 +203,7 @@ radj	jsr newch       ;finish byte, clr flags
 	lda fsblk       ;check for last value
 	beq rd15
 	sta shcnl
-;.pag 'byte handler'
+
 ;*************************************************
 ;* byte handler of cassette read                 *
 ;*                                               *

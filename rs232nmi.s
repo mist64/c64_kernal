@@ -1,4 +1,3 @@
-;.page 'nmi handler'
 nmi	sei             ;no irq's allowed...
 	jmp (nminv)     ;...could mess up cassettes
 nnmi	pha
@@ -111,7 +110,7 @@ baudo	.word 10277-cbit ; 50 baud
 ;   of the next bit.
 ;   aprox the time to service a cb1 nmi
 cbit	=100            ;cycles
-;.pag 'nmi - subroutines'
+
 ; t2nmi - subroutine to handle an rs232
 ;  bit input.
 ;

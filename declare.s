@@ -1,4 +1,3 @@
-;.pag 'declare'
 	*=$0000         ;declare 6510 ports
 d6510	*=*+1           ;6510 data direction register
 r6510	*=*+1           ;6510 data register
@@ -213,7 +212,6 @@ tbuffr	*=*+192         ;cassette data buffer
 vicscn	*=*+1024
 ramloc
 
-;.pag 'declare'
 ; i/o devices
 ;
 	* =$d000
@@ -264,7 +262,7 @@ d2cra	*=*+1
 d2crb	*=*+1
 
 timrb	=$19            ;6526 crb enable one-shot tb
-;.pag 'declare'
+
 ;tape block types
 ;
 eot	=5 ;end of tape

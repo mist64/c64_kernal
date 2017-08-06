@@ -1,4 +1,3 @@
-;.pag 'messages'
 ms1	.byt $d,"I/O ERROR ",$a3
 ms5	.byt $d,"SEARCHING",$a0
 ms6	.byt "FOR",$a0

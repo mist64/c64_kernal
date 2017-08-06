@@ -1,4 +1,3 @@
-;.pag 'keyboard tables'
 keycod	;keyboard mode 'dispatch'
 	.word mode1
 	.word mode2
@@ -19,7 +18,6 @@ keycod	;keyboard mode 'dispatch'
 ;.word cctta3 ;dummy
 ;.word contrl
 
-;.pag 'editor.3'
 mode1
 ;del,3,5,7,9,+,yen sign,1
 	.byt $14,$0d,$1d,$88,$85,$86,$87,$11

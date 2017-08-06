@@ -1,4 +1,3 @@
-;.pag 'jump table/vectors'
 	.byte 3         ;kernal version
 
 	jmp pcint
@@ -44,9 +43,6 @@ jplot	jmp plot        ;read/set x,y coord
 jiobas	jmp iobase      ;return i/o base
 
 	.byte "RRBY"
-
-
-;.pag 'jump table/vectors'
 
 	.word nmi        ;program defineable
 	.word start      ;initialization code

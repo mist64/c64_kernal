@@ -1,4 +1,3 @@
-;.pag 'tape files'
 ;fah -- find any header
 ;
 ;reads tape device until one of following

@@ -1,4 +1,3 @@
-;.pag 'open file'
 ;***********************************
 ;*                                 *
 ;* open function                   *
@@ -154,7 +153,7 @@ op40	lda (fnadr),y
 	bne op40
 ;
 op45	jmp cunlsn      ;jsr unlsn: clc: rts
-;.page 'open rs232 file'
+
 ; opn232 - open an rs-232 or parallel port file
 ;
 ; variables initilized

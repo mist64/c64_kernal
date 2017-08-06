@@ -1,4 +1,3 @@
-;.pag 'tape control'
 jtp20	jsr zzz
 	inc bufpt
 	ldy bufpt
