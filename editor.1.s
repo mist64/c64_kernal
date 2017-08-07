@@ -290,7 +290,7 @@ lop2	pla
 	clc             ;good return
 	cli
 	rts
-;.pag
+
 wlogic
 	jsr chkdwn      ;maybe we should we increment tblx
 	inc pntr        ;bump charcter pointer
@@ -334,7 +334,7 @@ wlog10	dec tblx
 	lda #0
 	sta pntr        ;point to first byte
 wlgrts	rts
-;.pag
+
 bkln	ldx tblx
 	bne bkln1
 	stx pntr

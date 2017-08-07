@@ -1,6 +1,5 @@
 .feature labels_without_colons, pc_assignment
 
-.include "disclaimer.s"
 .include "declare.s"
 
 	.segment "LOPATCHES"

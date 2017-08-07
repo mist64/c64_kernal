@@ -210,7 +210,7 @@ scolor	lda pnt         ;generate color ptr
 	ora #>viccol    ;vic color ram
 	sta user+1
 	rts
-;.pag
+
 key	jsr $ffea       ;update jiffy clock
 	lda blnsw       ;blinking crsr ?
 	bne key4        ;no
@@ -364,7 +364,7 @@ putque
 scnrts	lda #$7f        ;setup pb7 for stop key sense
 	sta colm
 	rts
-;.pag
+
 ;
 ; shift logic
 ;
